@@ -1,5 +1,5 @@
 
-import { Building, Network, Home, SolarPanel, Wind, BarChart4 } from 'lucide-react';
+import { Building, Network, Home, Sun, Wind, BarChart4 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ const services = [
     description: "Cutting-edge network solutions for smart, connected communities enabling advanced home automation and monitoring."
   },
   {
-    icon: <SolarPanel className="h-10 w-10" />,
+    icon: <Sun className="h-10 w-10" />,
     title: "Renewable Energy Solutions",
     description: "Custom solar panel installations, geothermal systems, and energy storage solutions integrated directly into building designs."
   },

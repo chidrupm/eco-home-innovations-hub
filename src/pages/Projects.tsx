@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Leaf, SolarPanel, Droplets, Wind, Home, BarChart, Check } from 'lucide-react';
+import { Leaf, Sun, Droplets, Wind, Home, BarChart, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ const allProjects = [
     tags: ["Solar Energy", "Rainwater Harvesting", "Smart Home"],
     image: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e",
     sustainabilityFeature: "Solar Energy",
-    sustainabilityIcon: <SolarPanel className="h-5 w-5" />,
+    sustainabilityIcon: <Sun className="h-5 w-5" />,
     description: "A collection of 12 luxury eco-homes featuring integrated solar arrays, smart home automation, and advanced rainwater harvesting systems.",
     features: [
       "32kW solar panel system",

@@ -1,11 +1,11 @@
 
-import { SolarPanel, Droplets, Wind, Leaf, Recycle, BarChart } from 'lucide-react';
+import { Sun, Droplets, Wind, Leaf, Recycle, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const features = [
   {
-    icon: <SolarPanel className="h-10 w-10" />,
+    icon: <Sun className="h-10 w-10" />,
     title: "Solar Integration",
     description: "Custom designed solar arrays integrated into the architectural design of your home."
   },

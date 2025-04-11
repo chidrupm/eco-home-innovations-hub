@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Leaf, SolarPanel, Droplets, Wind } from 'lucide-react';
+import { Leaf, Sun, Droplets, Wind } from 'lucide-react';
 
 const projects = [
   {
@@ -12,7 +12,7 @@ const projects = [
     tags: ["Solar Energy", "Rainwater Harvesting", "Smart Home"],
     image: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e",
     sustainabilityFeature: "Solar Energy",
-    sustainabilityIcon: <SolarPanel className="h-5 w-5" />
+    sustainabilityIcon: <Sun className="h-5 w-5" />
   },
   {
     id: 2,

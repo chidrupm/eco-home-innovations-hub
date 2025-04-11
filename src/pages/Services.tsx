@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Building, Network, Home, SolarPanel, Wind, BarChart4, Check } from 'lucide-react';
+import { Building, Network, Home, Sun, Wind, BarChart4, Check } from 'lucide-react';
 
 const serviceDetails = [
   {
@@ -53,7 +53,7 @@ const serviceDetails = [
   },
   {
     id: 'renewable-energy',
-    icon: <SolarPanel className="h-12 w-12" />,
+    icon: <Sun className="h-12 w-12" />,
     title: "Renewable Energy Solutions",
     description: "We design and install custom solar panel installations, geothermal systems, and energy storage solutions integrated directly into building designs.",
     features: [
