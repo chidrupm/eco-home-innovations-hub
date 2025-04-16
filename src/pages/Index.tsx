@@ -7,6 +7,7 @@ import Projects from '@/components/Projects';
 import Features from '@/components/Features';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Chatbot from '@/components/Chatbot';
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <Features />
       <Contact />
       <Footer />
+      <Chatbot />
     </div>
   );
 };

@@ -2,35 +2,35 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Leaf, Sun, Droplets, Wind } from 'lucide-react';
+import { Code, Server, Database, Laptop, Brain } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
-    title: "EcoHaven Residences",
-    location: "Portland, Oregon",
-    tags: ["Solar Energy", "Rainwater Harvesting", "Smart Home"],
-    image: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e",
-    sustainabilityFeature: "Solar Energy",
-    sustainabilityIcon: <Sun className="h-5 w-5" />
+    title: "CodeCollab",
+    category: "Web Application",
+    tags: ["React", "WebSockets", "Node.js", "MongoDB"],
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    techFeature: "Real-time Collaboration",
+    techIcon: <Code className="h-5 w-5" />
   },
   {
     id: 2,
-    title: "Terra Verde Community",
-    location: "Austin, Texas",
-    tags: ["Geothermal", "Living Walls", "Zero Waste"],
-    image: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace",
-    sustainabilityFeature: "Water Conservation",
-    sustainabilityIcon: <Droplets className="h-5 w-5" />
+    title: "SmartRecommender",
+    category: "Machine Learning",
+    tags: ["Python", "TensorFlow", "NLP", "Flask"],
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
+    techFeature: "AI Recommendation Engine",
+    techIcon: <Brain className="h-5 w-5" />
   },
   {
     id: 3,
-    title: "Skywind Towers",
-    location: "Chicago, Illinois",
-    tags: ["Wind Power", "Green Roof", "Energy Efficient"],
-    image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511",
-    sustainabilityFeature: "Wind Energy",
-    sustainabilityIcon: <Wind className="h-5 w-5" />
+    title: "CloudScale",
+    category: "DevOps Solution",
+    tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    techFeature: "Serverless Architecture",
+    techIcon: <Server className="h-5 w-5" />
   }
 ];
 
@@ -38,7 +38,7 @@ const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20" id="projects">
       <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-serif font-semibold mb-4">
@@ -46,7 +46,7 @@ const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-ina-gold mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Discover our sustainable homes, each featuring unique eco-friendly elements that reflect our commitment to innovation and environmental responsibility.
+            A showcase of my technical projects, combining innovative solutions with clean, efficient code to solve real-world problems.
           </p>
         </div>
         
@@ -68,15 +68,15 @@ const Projects = () => {
               
               <div className="absolute inset-0 bg-gradient-to-t from-ina-black/90 via-ina-black/30 to-transparent p-6 flex flex-col justify-end transition-opacity duration-300">
                 <div className="flex items-center mb-2">
-                  <Leaf className="h-5 w-5 text-ina-gold mr-2" />
-                  <span className="text-white/80 text-sm">{project.location}</span>
+                  <Code className="h-5 w-5 text-ina-gold mr-2" />
+                  <span className="text-white/80 text-sm">{project.category}</span>
                 </div>
                 
                 <h3 className="text-white text-xl font-serif font-semibold">{project.title}</h3>
                 
                 <div className="flex items-center mt-3 bg-ina-black/50 rounded-full px-3 py-1 w-fit">
-                  {project.sustainabilityIcon}
-                  <span className="text-white text-xs ml-2">{project.sustainabilityFeature}</span>
+                  {project.techIcon}
+                  <span className="text-white text-xs ml-2">{project.techFeature}</span>
                 </div>
                 
                 <div className={`flex flex-wrap gap-2 mt-4 transition-all duration-300 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'}`}>

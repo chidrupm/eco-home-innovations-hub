@@ -1,62 +1,62 @@
 
-import { Building, Network, Home, Sun, Wind, BarChart4 } from 'lucide-react';
+import { Code, Database, Server, Laptop, Brain, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-const services = [
+const skills = [
   {
-    icon: <Home className="h-10 w-10" />,
-    title: "Sustainable Home Construction",
-    description: "Custom-built homes with unique sustainability features tailored to each client's preferences and the local environment."
+    icon: <Code className="h-10 w-10" />,
+    title: "Full-Stack Development",
+    description: "Proficient in building responsive web applications using React, Node.js, and modern JavaScript frameworks with TypeScript."
   },
   {
-    icon: <Building className="h-10 w-10" />,
-    title: "Property Development",
-    description: "Eco-friendly residential and commercial developments designed with smart technology integration and green spaces."
+    icon: <Database className="h-10 w-10" />,
+    title: "Database Management",
+    description: "Experience with SQL and NoSQL databases including PostgreSQL, MongoDB, and Firebase for scalable data solutions."
   },
   {
-    icon: <Network className="h-10 w-10" />,
-    title: "Network Infrastructure",
-    description: "Cutting-edge network solutions for smart, connected communities enabling advanced home automation and monitoring."
+    icon: <Server className="h-10 w-10" />,
+    title: "DevOps & Cloud Services",
+    description: "Skilled in AWS, Docker, and CI/CD pipelines for automated deployment and infrastructure management."
   },
   {
-    icon: <Sun className="h-10 w-10" />,
-    title: "Renewable Energy Solutions",
-    description: "Custom solar panel installations, geothermal systems, and energy storage solutions integrated directly into building designs."
+    icon: <Laptop className="h-10 w-10" />,
+    title: "Mobile App Development",
+    description: "Creating cross-platform mobile applications using React Native and native development with Swift and Kotlin."
   },
   {
-    icon: <Wind className="h-10 w-10" />,
-    title: "Green Retrofitting",
-    description: "Transform existing properties into energy-efficient, sustainable spaces with minimal environmental impact."
+    icon: <Brain className="h-10 w-10" />,
+    title: "Artificial Intelligence",
+    description: "Developing machine learning models and AI integrations using TensorFlow, PyTorch, and natural language processing techniques."
   },
   {
-    icon: <BarChart4 className="h-10 w-10" />,
-    title: "Sustainability Consulting",
-    description: "Expert guidance on implementing eco-friendly building practices and achieving sustainability certifications."
+    icon: <BookOpen className="h-10 w-10" />,
+    title: "Computer Science Fundamentals",
+    description: "Strong foundation in algorithms, data structures, system design, and computer architecture principles."
   }
 ];
 
 const Services = () => {
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gray-50 py-20" id="skills">
       <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-serif font-semibold mb-4">
-            Our <span className="gold-gradient">Services</span>
+            My <span className="gold-gradient">Skills</span>
           </h2>
           <div className="w-20 h-1 bg-ina-gold mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            We offer a comprehensive range of construction and development services focused on sustainability and innovation.
+            A collection of technical skills and expertise I've developed throughout my computer science journey.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {skills.map((skill, index) => (
             <div key={index} className="bg-white p-8 rounded-lg shadow-md transition-scale">
-              <div className="text-ina-gold mb-4">{service.icon}</div>
-              <h3 className="text-xl font-serif font-semibold mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-6">{service.description}</p>
-              <Link to="/services" className="text-ina-gold hover:text-ina-gold2 flex items-center font-medium">
+              <div className="text-ina-gold mb-4">{skill.icon}</div>
+              <h3 className="text-xl font-serif font-semibold mb-3">{skill.title}</h3>
+              <p className="text-gray-600 mb-6">{skill.description}</p>
+              <Link to="/skills" className="text-ina-gold hover:text-ina-gold2 flex items-center font-medium">
                 Learn more
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -68,7 +68,7 @@ const Services = () => {
         
         <div className="text-center mt-16">
           <Button asChild className="btn-primary">
-            <Link to="/services">View All Services</Link>
+            <Link to="/skills">View All Skills</Link>
           </Button>
         </div>
       </div>
